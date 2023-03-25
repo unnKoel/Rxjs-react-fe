@@ -1,28 +1,43 @@
-import path from "path";
-import webpack from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from 'path'
+import webpack from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import 'webpack-dev-server'
 
 const config: webpack.Configuration = {
-  mode: "development",
-  entry: {
-    index: "./src/index.js",
-    print: "./src/print.js",
+  mode: 'development',
+  entry: './src/index.ts',
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
-  devtool: "inline-source-map",
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  devtool: 'inline-source-map',
   devServer: {
-    static: "./dist",
+    static: path.join(__dirname, 'public/'),
+    port: 3000,
+    hot: true,
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development",
+      title: 'Development',
     }),
   ],
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
-    publicPath: "/",
-  },
-};
+}
 
-export default config;
+export default config
