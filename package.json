@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "lint": "eslint src --ext .ts",
-    "format": "prettier --write --ignore-unknown"
+    "lint": "eslint src --ext .tsx,.ts",
+    "format": "prettier . --write --ignore-unknown"
   },
   "author": "Addy Zhou",
   "license": "ISC",
@@ -43,8 +43,8 @@
     "webpack-dev-server": "^4.13.1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "src/**/*.{ts,tsx}": "npx lint"
+    "**/*": "npm run format",
+    "src/**/*.{ts,tsx}": "npm run lint"
   },
   "dependencies": {
     "@types/react": "^18.0.29",

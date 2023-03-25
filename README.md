@@ -2,8 +2,8 @@
 
 Integrate Rxjs with react in Front End.
 
-
 ## Question
+
 - Why would we exclude node_modules when using babel-loader?
 
   [Why would we exclude node_modules when using babel-loader?](https://stackoverflow.com/questions/54156617/why-would-we-exclude-node-modules-when-using-babel-loader)
@@ -28,9 +28,8 @@ Integrate Rxjs with react in Front End.
 
   [How to make ESLint work with Prettier avoiding conflicts and problems](https://dev.to/studio_m_song/how-to-make-eslint-work-with-prettier-avoiding-conflicts-and-problems-57pi)
 
-
-
 ## Reference
-  [Setting ESLint on a React Typescript project(2022)](https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba)
 
-  []()
+[Setting ESLint on a React Typescript project(2022)](https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba)
+
+[]()
