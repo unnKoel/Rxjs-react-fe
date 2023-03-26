@@ -47,10 +47,11 @@ Integrate Rxjs with react in Front End.
 ## Reference
 
 #### something about building project up.
-  [Full Guide: Add Eslint to React TypeScript Project](https://levelup.gitconnected.com/full-guide-add-eslint-to-react-typescript-project-406618192b9)
+
+[Full Guide: Add Eslint to React TypeScript Project](https://levelup.gitconnected.com/full-guide-add-eslint-to-react-typescript-project-406618192b9)
 
 #### something about how to write react in ts.
-  [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
 
-  [React in Ts offical](https://www.typescriptlang.org/docs/handbook/react.html)
+[React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
 
+[React in Ts offical](https://www.typescriptlang.org/docs/handbook/react.html)
