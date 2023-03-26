@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // leave jsx convertion to babel, here preserve jsx original syntax.
     // https://www.typescriptlang.org/docs/handbook/jsx.html
     "jsx": "preserve",
     "target": "es2022",

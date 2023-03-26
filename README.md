@@ -28,8 +28,29 @@ Integrate Rxjs with react in Front End.
 
   [How to make ESLint work with Prettier avoiding conflicts and problems](https://dev.to/studio_m_song/how-to-make-eslint-work-with-prettier-avoiding-conflicts-and-problems-57pi)
 
+- ?:how does babel deal with polyfill
+
+  [@babel/plugin-transform-runtime](https://babeljs.io/docs/babel-plugin-transform-runtime#technical-details)
+
+  [Polyfill](https://babeljs.io/docs/usage#polyfill)
+
+  [@babel/plugin-transform-regenerator](https://babeljs.io/docs/babel-plugin-transform-regenerator)
+
+  [@babel/preset-env#exclude](https://babeljs.io/docs/babel-preset-env.html#exclude)
+
+  [Confused about useBuiltIns option of @babel/preset-env (using Browserslist Integration)](https://stackoverflow.com/questions/52625979/confused-about-usebuiltins-option-of-babel-preset-env-using-browserslist-integ)
+
+  [How do I use babel's `useBuiltIns: 'usage'` option on the vendors bundle?](https://stackoverflow.com/questions/52407499/how-do-i-use-babels-usebuiltins-usage-option-on-the-vendors-bundle)
+
+  [What is best practice for `@babel/preset-env` + `useBuiltIns` + `@babel/runtime` + `browserslistrc`](https://stackoverflow.com/questions/63231564/what-is-best-practice-for-babel-preset-env-usebuiltins-babel-runtime)
+
 ## Reference
 
-[Setting ESLint on a React Typescript project(2022)](https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba)
+#### something about building project up.
+  [Full Guide: Add Eslint to React TypeScript Project](https://levelup.gitconnected.com/full-guide-add-eslint-to-react-typescript-project-406618192b9)
 
-[]()
+#### something about how to write react in ts.
+  [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
+
+  [React in Ts offical](https://www.typescriptlang.org/docs/handbook/react.html)
+

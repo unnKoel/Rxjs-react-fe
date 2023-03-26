@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "lint": "eslint src --ext .tsx,.ts",
-    "format": "prettier . --write --ignore-unknown"
+    "lint": "eslint src --ext .tsx,.ts --fix",
+    "format": "prettier . --write"
   },
   "author": "Addy Zhou",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "express": "^4.18.2",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
@@ -43,9 +44,10 @@
     "webpack-dev-server": "^4.13.1"
   },
   "lint-staged": {
-    "**/*": "npm run format",
-    "src/**/*.{ts,tsx}": "npm run lint"
+    "*": "prettier --check",
+    "src/**/*.{ts,tsx}": "eslint src --ext .tsx,.ts"
   },
+  "browserslist": "> 0.25%, not dead",
   "dependencies": {
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",

@@ -6,6 +6,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "standard-with-typescript",
     "prettier"
   ],
@@ -16,9 +17,10 @@
     // https://stackoverflow.com/questions/58510287/parseroptions-project-has-been-set-for-typescript-eslint-parser
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "react-hooks"],
   "rules": {
-    "@typescript-eslint/consistent-type-imports": 0
+    "@typescript-eslint/consistent-type-imports": 0,
+    "prettier/prettier": "error"
   },
 
   "settings": {
