@@ -1,11 +1,13 @@
-import path from 'path'
-import webpack from 'webpack'
+import path, { dirname } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import 'webpack-dev-server'
+import { fileURLToPath } from 'url'
 
-const config: webpack.Configuration = {
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const staticPath = path.join(__dirname, 'public/')
+
+const config = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -26,18 +28,21 @@ const config: webpack.Configuration = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: path.join(__dirname, 'public/'),
+    static: staticPath,
     port: 3000,
     hot: true,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.json'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      template: path.join(staticPath, 'index.html'),
     }),
   ],
+  optimization: {
+    runtimeChunk: 'single',
+  },
 }
 
 export default config
