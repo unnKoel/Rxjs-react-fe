@@ -44,8 +44,8 @@
     "webpack-dev-server": "^4.13.1"
   },
   "lint-staged": {
-    "*": "prettier --check",
-    "src/**/*.{ts,tsx}": "eslint src --ext .tsx,.ts"
+    "*": "prettier --write",
+    "src/**/*.{ts,tsx}": "eslint --ext .tsx,.ts"
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
