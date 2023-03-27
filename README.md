@@ -2,7 +2,17 @@
 
 Integrate Rxjs with react in Front End.
 
-## Question
+## Reference
+
+- [Creating a React App… From Scratch.](https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658)
+
+- [Full Guide: Add Eslint to React TypeScript Project](https://levelup.gitconnected.com/full-guide-add-eslint-to-react-typescript-project-406618192b9)
+
+- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
+
+- [React in Ts offical](https://www.typescriptlang.org/docs/handbook/react.html)
+
+## Q&A
 
 - Why would we exclude node_modules when using babel-loader?
 
@@ -44,21 +54,8 @@ Integrate Rxjs with react in Front End.
 
   [What is best practice for `@babel/preset-env` + `useBuiltIns` + `@babel/runtime` + `browserslistrc`](https://stackoverflow.com/questions/63231564/what-is-best-practice-for-babel-preset-env-usebuiltins-babel-runtime)
 
-## Reference
+## Notes
 
-#### something about building project up.
+- Don't configure path for commands in lint-staged configuration, leave path setting to lint-staged.
 
-[Creating a React App… From Scratch.](https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658)
-
-[Full Guide: Add Eslint to React TypeScript Project](https://levelup.gitconnected.com/full-guide-add-eslint-to-react-typescript-project-406618192b9)
-
-#### something about how to write react in ts.
-
-[React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
-
-[React in Ts offical](https://www.typescriptlang.org/docs/handbook/react.html)
-
-## notes
-
-- don't configure path for commands in lint-staged configuration, leave path setting to lint-staged.
-- don't configure auto fixing in auto execution process.
+- Don't configure auto fixing in auto execution process.
