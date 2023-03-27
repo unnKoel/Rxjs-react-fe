@@ -3,6 +3,7 @@
     // leave jsx convertion to babel, here preserve jsx original syntax.
     // https://www.typescriptlang.org/docs/handbook/jsx.html
     "jsx": "preserve",
+    // keep ES module for tree-shaking, and leave works of syntax and polyfill compilation to babel
     "target": "es2022",
     "outDir": "dist",
     "moduleResolution": "node",

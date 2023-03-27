@@ -1,15 +1,18 @@
 import path, { dirname } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { fileURLToPath } from 'url'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const staticPath = path.join(__dirname, 'public/')
+const devMode = process.env.NODE_ENV !== 'production'
 
 const config = {
-  mode: 'development',
+  mode: devMode ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
-    filename: '[name].bundle.js',
+    filename: devMode ? '[name].bundle.js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -22,11 +25,14 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
     ],
   },
-  devtool: 'inline-source-map',
+  devtool: devMode ? 'inline-source-map' : 'source-map',
   devServer: {
     static: staticPath,
     port: 3000,
@@ -39,9 +45,23 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(staticPath, 'index.html'),
     }),
-  ],
+  ].concat(
+    devMode
+      ? []
+      : [
+          new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+            chunkFilename: '[id].[contenthash].css',
+          }),
+        ],
+  ),
   optimization: {
     runtimeChunk: 'single',
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
   },
 }
 

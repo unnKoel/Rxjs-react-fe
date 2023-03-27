@@ -1,6 +1,12 @@
 {
   "presets": [
-    "@babel/env",
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "usage",
+        "core-js": "3.29"
+      }
+    ],
     [
       "@babel/preset-react",
       {
